@@ -171,11 +171,11 @@ export const articles = [
 ];
 
 export const userProfile = {
-  name: "Diego Ramirez",
+  name: "Fulano de Tal",
   age: 21,
-  email: "diego.ramirez@email.com",
+  email: "fulano.detal04@gmail.com",
   role: "Student / Potential Donor",
-  avatar: "https://i.pravatar.cc/150?img=33",
+  avatar: "/kidney-connect/avatar-profile.jpg",
   joinDate: "2025-01-10",
   donorStatus: "Registered",
   bio: "College student passionate about raising awareness for organ donation. I believe every young person should understand the importance of giving the gift of life.",
