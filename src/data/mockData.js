@@ -175,7 +175,7 @@ export const userProfile = {
   age: 21,
   email: "fulano.detal04@gmail.com",
   role: "Student / Potential Donor",
-  avatar: "/kidney-connect/avatar-profile.jpg",
+  avatar: "/kidney-connect/avatar-profile.png",
   joinDate: "2025-01-10",
   donorStatus: "Registered",
   bio: "College student passionate about raising awareness for organ donation. I believe every young person should understand the importance of giving the gift of life.",
