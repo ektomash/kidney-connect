@@ -31,7 +31,7 @@ function Profile() {
           </div>
           <div className="donor-status">
             <span className="donor-badge">
-              &#9989; Organ Donor: {donorStatus}
+              Organ Donor: {donorStatus}
             </span>
           </div>
         </div>
