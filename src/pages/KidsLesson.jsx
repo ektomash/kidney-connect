@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useParams, useSearchParams, Link } from "react-router-dom";
 import { kidsLessons } from "../data/kidsLessons";
+import fallbackImage from "../assets/hero.png";
 import Mascot from "../components/Mascot";
 import SpeechBubble from "../components/SpeechBubble";
 import Quiz from "../components/Quiz";
@@ -158,6 +159,9 @@ function KidsLessonContent({
                 alt={step.imageAlt}
                 className={`kids-lesson-image ${imageLoaded ? "loaded" : ""}`}
                 onLoad={() => setImageLoaded(true)}
+                onError={(event) => {
+                  event.currentTarget.src = fallbackImage;
+                }}
               />
               {!imageLoaded && <div className="kids-lesson-image-placeholder" />}
             </div>

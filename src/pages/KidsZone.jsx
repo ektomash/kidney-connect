@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { kidsLessons } from "../data/kidsLessons";
+import fallbackImage from "../assets/hero.png";
 import Mascot from "../components/Mascot";
 import "./KidsZone.css";
 
@@ -57,7 +58,13 @@ function KidsZone() {
               style={{ "--lesson-color": lesson.color }}
             >
               <div className="lesson-card-image">
-                <img src={lesson.coverImage} alt={lesson.title} />
+                <img
+                  src={lesson.coverImage}
+                  alt={lesson.title}
+                  onError={(event) => {
+                    event.currentTarget.src = fallbackImage;
+                  }}
+                />
                 <span className="lesson-card-icon">{lesson.icon}</span>
               </div>
               <div className="lesson-card-body">
