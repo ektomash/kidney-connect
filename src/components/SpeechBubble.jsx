@@ -1,5 +1,20 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import "./SpeechBubble.css";
+
+let cachedVoices = [];
+
+function preloadVoices() {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  const synth = window.speechSynthesis;
+  cachedVoices = synth.getVoices();
+  if (!cachedVoices.length) {
+    synth.addEventListener("voiceschanged", () => {
+      cachedVoices = synth.getVoices();
+    }, { once: true });
+  }
+}
+
+preloadVoices();
 
 const NATURAL_VOICE_HINTS = [
   "online (natural)",
@@ -40,7 +55,7 @@ function scoreVoice(voice, targetLang) {
 }
 
 function pickNaturalVoice(synth, lang) {
-  const voices = synth.getVoices();
+  const voices = cachedVoices.length ? cachedVoices : synth.getVoices();
   if (!voices.length) return null;
 
   const normalizedLang = (lang || "en-US").toLowerCase();
@@ -79,6 +94,17 @@ function SpeechBubble({ text, onAudioStart, onAudioEnd }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const utteranceRef = useRef(null);
   const speechSupported = typeof window !== "undefined" && "speechSynthesis" in window;
+
+  useEffect(() => {
+    if (!speechSupported) return;
+    const synth = window.speechSynthesis;
+    const update = () => { cachedVoices = synth.getVoices(); };
+    if (!cachedVoices.length) {
+      update();
+      synth.addEventListener("voiceschanged", update, { once: true });
+      return () => synth.removeEventListener("voiceschanged", update);
+    }
+  }, [speechSupported]);
 
   const handleAudio = useCallback(() => {
     if (!speechSupported) return;
