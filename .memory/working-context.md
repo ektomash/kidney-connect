@@ -25,3 +25,4 @@ Last updated: 2026-04-05
 - Kids lesson URLs now use slug (with id fallback), and quiz button now appears on final lesson step.
 - Kids lesson stage now uses consistent height so Back/Next controls stay at stable vertical position across slides.
 - Repository now tracks CLAUDE.md and .memory markdown/index files, while .memory/.obsidian is ignored.
+- Kids lesson pages now persist page/view in URL (`page` + `view`), so every step and quiz screen is directly addressable.
