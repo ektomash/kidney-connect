@@ -10,12 +10,8 @@
 }
 
 .profile-cover {
-  height: 180px;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(192, 57, 43, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 30%, rgba(231, 76, 60, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(245, 165, 165, 0.3) 0%, transparent 55%),
-    linear-gradient(135deg, #2c1a1a 0%, #4a2020 40%, #8b2525 70%, #c0392b 100%);
+  height: 160px;
+  background: linear-gradient(135deg, #f8d7d7 0%, #f5a5a5 50%, #e74c3c 100%);
   border-radius: 0 0 24px 24px;
 }
 
@@ -39,7 +35,7 @@
 
 .profile-details {
   flex: 1;
-  padding-top: 52px;
+  padding-top: 60px;
 }
 
 .profile-name {
@@ -75,7 +71,7 @@
 }
 
 .donor-status {
-  padding-top: 56px;
+  padding-top: 64px;
 }
 
 .donor-badge {
