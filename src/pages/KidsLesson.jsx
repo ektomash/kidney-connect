@@ -8,17 +8,19 @@ import LessonProgress from "../components/LessonProgress";
 import "./KidsLesson.css";
 
 function KidsLesson() {
-  const { id } = useParams();
+  const { lessonKey } = useParams();
   const [searchParams] = useSearchParams();
   const ageGroup = searchParams.get("age") || "younger";
 
   return (
-    <KidsLessonContent key={`${id}-${ageGroup}`} id={id} ageGroup={ageGroup} />
+    <KidsLessonContent key={`${lessonKey}-${ageGroup}`} lessonKey={lessonKey} ageGroup={ageGroup} />
   );
 }
 
-function KidsLessonContent({ id, ageGroup }) {
-  const lesson = kidsLessons.find((l) => l.id === Number(id));
+function KidsLessonContent({ lessonKey, ageGroup }) {
+  const lesson = kidsLessons.find(
+    (l) => String(l.id) === String(lessonKey) || l.slug === lessonKey,
+  );
   const [currentStep, setCurrentStep] = useState(0);
   const [isQuizActive, setIsQuizActive] = useState(false);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -148,7 +150,7 @@ function KidsLessonContent({ id, ageGroup }) {
         <div className="kids-lesson-nav-lessons">
           {prevLesson && (
             <Link
-              to={`/advice/kids/${prevLesson.id}?age=${ageGroup}`}
+              to={`/advice/kids/${prevLesson.slug || prevLesson.id}?age=${ageGroup}`}
               className="nav-lesson-link prev"
             >
               &larr; {prevLesson.title}
@@ -156,7 +158,7 @@ function KidsLessonContent({ id, ageGroup }) {
           )}
           {nextLesson && (
             <Link
-              to={`/advice/kids/${nextLesson.id}?age=${ageGroup}`}
+              to={`/advice/kids/${nextLesson.slug || nextLesson.id}?age=${ageGroup}`}
               className="nav-lesson-link next"
             >
               {nextLesson.title} &rarr;
