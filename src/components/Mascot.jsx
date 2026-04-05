@@ -6,182 +6,111 @@ function Mascot({ pose = "idle", size = 120 }) {
   return (
     <div
       className={`mascot-wrapper ${poseClass}`}
-      style={{ width: size, height: "auto" }}
+      style={{ width: size * 1.65, height: "auto", maxWidth: "100%" }}
     >
       <svg
-        viewBox="0 0 200 300"
+        viewBox="0 0 1054 586"
         xmlns="http://www.w3.org/2000/svg"
         className="mascot-svg"
       >
-        <defs>
-          <linearGradient id="kidneyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#FF8A80" />
-            <stop offset="100%" stopColor="#E74C5A" />
-          </linearGradient>
-          <linearGradient id="shoeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#E74C5A" />
-            <stop offset="100%" stopColor="#C0392B" />
-          </linearGradient>
-        </defs>
-
-        {/* Left leg */}
         <g className="mascot-left-leg">
-          <line
-            x1="78" y1="210" x2="70" y2="255"
-            stroke="#D4453A" strokeWidth="6" strokeLinecap="round"
-          />
-          <ellipse cx="65" cy="262" rx="16" ry="10" fill="url(#shoeGrad)" />
-          <ellipse cx="60" cy="258" rx="6" ry="3" fill="#fff" opacity="0.4" />
+          <path d="M251.5 576.643C261 550.143 273 522.643 293.5 481.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M255.713 578.345C254.969 580.441 252.606 581.771 250.681 582.615C243.756 585.653 231.925 587.066 224.93 584.131C222.629 583.163 220.539 581.611 219.585 579.235C218.691 577.004 218.86 574.256 219.833 572.082C221.549 568.251 225.626 565.011 229.515 563.603C235.313 561.507 244.195 565.576 249.5 568.143L255.713 578.345Z" fill="#360505" />
+          <path d="M341 576.643C331.5 550.143 319.5 522.643 299 481.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M336.787 578.345C337.531 580.441 339.894 581.771 341.819 582.615C348.744 585.653 360.575 587.066 367.57 584.131C369.871 583.163 371.961 581.611 372.915 579.235C373.809 577.004 373.64 574.256 372.667 572.082C370.951 568.251 366.874 565.011 362.985 563.603C357.187 561.507 348.305 565.576 343 568.143L336.787 578.345Z" fill="#360505" />
         </g>
 
-        {/* Right leg */}
         <g className="mascot-right-leg">
-          <line
-            x1="122" y1="210" x2="130" y2="255"
-            stroke="#D4453A" strokeWidth="6" strokeLinecap="round"
-          />
-          <ellipse cx="135" cy="262" rx="16" ry="10" fill="url(#shoeGrad)" />
-          <ellipse cx="140" cy="258" rx="6" ry="3" fill="#fff" opacity="0.4" />
+          <path d="M703.5 576.643C713 550.143 725 522.643 745.5 481.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M707.713 578.345C706.969 580.441 704.606 581.771 702.681 582.615C695.756 585.653 683.925 587.066 676.93 584.131C674.629 583.163 672.539 581.611 671.585 579.235C670.691 577.004 670.86 574.256 671.833 572.082C673.549 568.251 677.626 565.011 681.515 563.603C687.313 561.507 696.195 565.576 701.5 568.143L707.713 578.345Z" fill="#360505" />
+          <path d="M793 576.643C783.5 550.143 771.5 522.643 751 481.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M788.787 578.345C789.531 580.441 791.894 581.771 793.819 582.615C800.744 585.653 812.575 587.066 819.57 584.131C821.871 583.163 823.961 581.611 824.915 579.235C825.809 577.004 825.64 574.256 824.667 572.082C822.951 568.251 818.874 565.011 814.985 563.603C809.187 561.507 800.305 565.576 795 568.143L788.787 578.345Z" fill="#360505" />
         </g>
 
-        {/* Left arm */}
         <g className="mascot-left-arm">
-          <line
-            x1="55" y1="120" x2="20" y2="155"
-            stroke="#D4453A" strokeWidth="5" strokeLinecap="round"
-          />
-          <circle cx="16" cy="160" r="10" fill="#fff" />
-          <circle cx="16" cy="160" r="10" stroke="#e0e0e0" strokeWidth="1" fill="#fff" />
-
-          {pose === "encouraging" && (
-            <g className="mascot-thumbs-up">
-              <rect x="12" y="140" width="6" height="15" rx="3" fill="#fff" stroke="#e0e0e0" strokeWidth="0.5" />
-            </g>
-          )}
+          <path d="M19.7349 303.643C28.2349 321.143 81.2349 363.643 118.235 370.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M28.5752 292.853C22.1158 285.809 13.6431 280.848 5.19623 288.481C2.07006 291.289 0.201595 295.237 0.0152664 299.435C-0.186589 304.409 1.61973 309.256 5.03057 312.881C8.87618 317.007 14.3366 319.176 19.9317 319.293C21.3809 319.319 22.8249 319.32 24.2742 319.297L31.6548 316.018C37.4051 308.387 45.5414 291.564 28.5752 292.853Z" fill="#360505" />
         </g>
 
-        {/* Right arm */}
         <g className="mascot-right-arm">
-          <line
-            x1="145" y1="120" x2="180" y2="155"
-            stroke="#D4453A" strokeWidth="5" strokeLinecap="round"
-          />
-          <circle cx="184" cy="160" r="10" fill="#fff" />
-          <circle cx="184" cy="160" r="10" stroke="#e0e0e0" strokeWidth="1" fill="#fff" />
-
-          {pose === "idle" && (
-            <g className="mascot-wave-hand">
-              <line x1="184" y1="150" x2="184" y2="138" stroke="#e0e0e0" strokeWidth="1" />
-              <circle cx="184" cy="135" r="4" fill="#fff" stroke="#e0e0e0" strokeWidth="0.5" />
-            </g>
-          )}
+          <path d="M1034 331.643C1025.5 349.143 972.5 391.643 935.5 398.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M1025.16 320.853C1031.62 313.809 1040.09 308.848 1048.54 316.481C1051.66 319.289 1053.53 323.237 1053.72 327.435C1053.92 332.409 1052.12 337.256 1048.7 340.881C1044.86 345.007 1039.4 347.176 1033.8 347.293C1032.35 347.319 1030.91 347.32 1029.46 347.297L1022.08 344.018C1016.33 336.387 1008.19 319.564 1025.16 320.853Z" fill="#360505" />
         </g>
 
-        {/* Kidney body */}
-        <path
-          className="mascot-body"
-          d="M100,45 C145,45 165,70 165,105 C165,140 145,175 120,195
-             C110,203 105,210 100,215 C95,210 90,203 80,195
-             C55,175 35,140 35,105 C35,70 55,45 100,45 Z"
-          fill="url(#kidneyGrad)"
-          stroke="#D4453A"
-          strokeWidth="2"
-        />
+        <g className="mascot-body">
+          <path d="M665.883 21.6961C685.794 6.31912 717.206 -0.797722 742.075 0.0708047L747.945 0.0438529C803.377 3.49081 844.835 33.1043 881.242 73.002C928.59 124.894 951.632 191.636 958.304 260.723C960.467 281.074 960.995 301.565 959.883 322C958.149 349.737 954.624 364.084 947.124 390.096C946.146 393.517 945.323 395.692 944.014 398.973C921.318 453.604 887.991 489.578 832.802 512.352C830.83 513.172 828.847 513.967 826.855 514.738L826.265 514.691C822.818 516.234 813.413 519.22 811.985 520.043C809.2 520.773 806.152 521.642 803.357 522.232C770.009 529.588 750.641 531.642 716.29 528.847C713.464 528.837 710.446 528.433 707.625 528.123C678.832 522.61 653.688 515.864 628.601 500.058C594.674 478.677 571.632 453.549 562.036 414.343C561.177 411.783 560.866 407.547 560.711 404.807C558.092 367.688 565.26 342.708 580.731 308.886C582.899 304.148 591.781 287.66 592.837 284.282L592.956 283.888L591.719 282.741C588.836 281.187 582.884 276.294 580.368 274.15C564.489 260.598 548.558 242.426 541.519 222.484C537.451 210.959 533.3 191.057 538.952 179.51C540.789 175.818 544.252 173.23 548.154 172.023C566.404 166.379 569.297 184.715 573.909 196.823C581.067 215.623 595.539 234.131 613.576 243.343C620.553 229.442 626.769 188.461 625.915 171.919C623.105 117.43 612.163 62.1354 662.736 23.6274C663.828 22.7668 664.677 22.3535 665.883 21.6961Z" fill="#EE6968" />
+          <path d="M376.566 29.339C356.655 13.9621 325.243 6.84522 300.373 7.71375L294.504 7.6868C239.072 11.1338 197.614 40.7473 161.207 80.6449C113.859 132.537 90.8164 199.279 84.1448 268.366C81.9814 288.717 81.4535 309.208 82.5663 329.643C84.3002 357.38 87.8249 371.727 95.3246 397.739C96.3028 401.16 97.1257 403.335 98.4352 406.616C121.131 461.247 154.458 497.221 209.647 519.995C211.619 520.815 213.602 521.61 215.594 522.38L216.184 522.334C219.631 523.877 229.036 526.863 230.464 527.686C233.249 528.416 236.297 529.285 239.092 529.875C272.44 537.231 291.808 539.285 326.159 536.49C328.985 536.48 332.003 536.076 334.824 535.766C363.616 530.253 388.76 523.507 413.847 507.701C447.775 486.32 470.817 461.192 480.413 421.986C481.272 419.426 481.583 415.19 481.738 412.45C484.357 375.331 477.189 350.351 461.718 316.529C459.549 311.791 450.668 295.303 449.612 291.925L449.493 291.531L450.73 290.384C453.613 288.83 459.565 283.937 462.08 281.793C477.96 268.241 493.891 250.069 500.93 230.127C504.998 218.602 509.149 198.7 503.497 187.153C501.66 183.461 498.197 180.873 494.295 179.666C476.045 174.022 473.151 192.358 468.54 204.466C461.382 223.266 446.91 241.774 428.873 250.986C421.896 237.085 415.68 196.104 416.534 179.561C419.344 125.073 430.286 69.7783 379.713 31.2703C378.621 30.4098 377.772 29.9964 376.566 29.339Z" fill="#EE6968" />
+        </g>
 
-        {/* Kidney indentation (the characteristic kidney notch) */}
-        <path
-          d="M95,55 C85,75 82,100 88,130"
-          fill="none"
-          stroke="#D4453A"
-          strokeWidth="2"
-          opacity="0.3"
-        />
+        <path d="M529 478.643C529 463.143 550.5 410.643 586.5 389.143" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M529.5 478.643C529.5 463.143 508 410.643 472 389.143" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="529" cy="483.643" r="15" fill="#360505" />
 
-        {/* Body highlight */}
-        <ellipse cx="115" cy="90" rx="20" ry="30" fill="#fff" opacity="0.15" />
+        <ellipse cx="894.929" cy="174.855" rx="22" ry="17.5" transform="rotate(66.0298 894.929 174.855)" fill="white" />
+        <ellipse cx="855.995" cy="108.522" rx="39.7976" ry="23.5465" transform="rotate(52.2079 855.995 108.522)" fill="white" />
+        <ellipse cx="160.396" cy="175.401" rx="22" ry="17.5" transform="rotate(113.97 160.396 175.401)" fill="white" />
+        <ellipse cx="198.566" cy="109.568" rx="39.7976" ry="23.5465" transform="rotate(127.792 198.566 109.568)" fill="white" />
 
-        {/* Blush circles */}
-        <circle cx="65" cy="130" r="10" fill="#FF6B6B" opacity="0.35" />
-        <circle cx="135" cy="130" r="10" fill="#FF6B6B" opacity="0.35" />
-
-        {/* Eyes */}
         <g className="mascot-eyes">
-          {/* Left eye */}
-          <ellipse cx="78" cy="105" rx="14" ry="16" fill="#fff" />
-          <ellipse cx="78" cy="105" rx="14" ry="16" stroke="#2c1a1a" strokeWidth="1.5" fill="#fff" />
-          <ellipse
-            cx={pose === "thinking" ? "76" : "80"}
-            cy={pose === "thinking" ? "100" : "107"}
-            rx="7" ry="8"
-            fill="#2c1a1a"
-            className="mascot-pupil-left"
-          />
-          <circle
-            cx={pose === "thinking" ? "73" : "77"}
-            cy={pose === "thinking" ? "97" : "103"}
-            r="3" fill="#fff"
-          />
-
-          {/* Right eye */}
-          <ellipse cx="122" cy="105" rx="14" ry="16" fill="#fff" />
-          <ellipse cx="122" cy="105" rx="14" ry="16" stroke="#2c1a1a" strokeWidth="1.5" fill="#fff" />
-          <ellipse
-            cx={pose === "thinking" ? "120" : "124"}
-            cy={pose === "thinking" ? "100" : "107"}
-            rx="7" ry="8"
-            fill="#2c1a1a"
-            className="mascot-pupil-right"
-          />
-          <circle
-            cx={pose === "thinking" ? "117" : "121"}
-            cy={pose === "thinking" ? "97" : "103"}
-            r="3" fill="#fff"
-          />
-        </g>
-
-        {/* Eyebrows */}
-        <g className="mascot-eyebrows">
-          {pose === "thinking" ? (
+          <circle cx="209.5" cy="333.143" r="35.5" fill="white" />
+          <path d="M206.615 308.916C208.356 308.713 209.952 308.358 211.56 309.054C214.238 312.525 206.575 318.963 208.523 323.421C217.218 343.321 227.011 324.236 229.577 323.675C233.525 324.696 232.673 332.811 232.158 335.928C231.004 342.923 226.885 348.412 221.226 352.553C198.696 365.488 175.443 340.589 189.04 318.931C192.888 312.803 199.732 310.173 206.615 308.916Z" fill="#360505" />
+          <circle cx="369.5" cy="328.143" r="35.5" fill="white" />
+          <path d="M366.615 303.916C368.356 303.713 369.952 303.358 371.56 304.054C374.238 307.525 366.575 313.963 368.523 318.421C377.218 338.321 387.011 319.236 389.577 318.675C393.525 319.696 392.673 327.811 392.158 330.928C391.004 337.923 386.885 343.412 381.226 347.553C358.696 360.488 335.443 335.589 349.04 313.931C352.888 307.803 359.732 305.173 366.615 303.916Z" fill="#360505" />
+          {pose === "celebrating" ? (
             <>
-              <path d="M64,82 Q78,72 92,82" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
-              <path d="M108,78 Q122,72 136,82" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
-            </>
-          ) : pose === "celebrating" ? (
-            <>
-              <path d="M64,82 Q78,74 92,82" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
-              <path d="M108,82 Q122,74 136,82" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
+              <path d="M663 339.474C672.5 324.974 693 322.474 704.5 339.474" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M820 339.474C829.5 324.974 850 322.474 861.5 339.474" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
             </>
           ) : (
             <>
-              <path d="M64,85 Q78,78 92,85" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
-              <path d="M108,85 Q122,78 136,85" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
+              <circle cx="690" cy="333" r="31" fill="white" />
+              <circle cx="690" cy="333" r="18" fill="#360505" />
+              <circle cx="681" cy="324" r="6" fill="white" />
+              <circle cx="842" cy="333" r="31" fill="white" />
+              <circle cx="842" cy="333" r="18" fill="#360505" />
+              <circle cx="833" cy="324" r="6" fill="white" />
             </>
           )}
         </g>
 
-        {/* Mouth */}
+        <g className="mascot-eyebrows">
+          {pose === "thinking" && (
+            <>
+              <path d="M168 281C188 271 214 271 234 281" stroke="#360505" strokeWidth="8" strokeLinecap="round" />
+              <path d="M332 275C352 266 376 266 396 275" stroke="#360505" strokeWidth="8" strokeLinecap="round" />
+              <path d="M650 278C672 268 700 268 722 278" stroke="#360505" strokeWidth="8" strokeLinecap="round" />
+              <path d="M804 278C826 268 854 268 876 278" stroke="#360505" strokeWidth="8" strokeLinecap="round" />
+            </>
+          )}
+        </g>
+
         <g className="mascot-mouth">
           {pose === "talking" ? (
-            <ellipse cx="100" cy="145" rx="12" ry="9" fill="#2c1a1a" className="mascot-mouth-talking" />
-          ) : pose === "celebrating" ? (
             <>
-              <path d="M82,140 Q100,162 118,140" fill="#2c1a1a" />
-              <path d="M86,140 Q100,150 114,140" fill="#FF8A80" />
+              <ellipse cx="289" cy="372" rx="24" ry="16" fill="#360505" className="mascot-mouth-talking" />
+              <path d="M779.5 371.643C770 386.143 749.5 388.643 738 371.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+            </>
+          ) : pose === "thinking" ? (
+            <>
+              <path d="M297 380C285 369 273 369 261 380" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M790 386C778 375 766 375 754 386" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
             </>
           ) : (
-            <path d="M85,140 Q100,155 115,140" fill="none" stroke="#2c1a1a" strokeWidth="2.5" strokeLinecap="round" />
+            <>
+              <path d="M310.5 365.643C301 380.143 280.5 382.643 269 365.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M779.5 371.643C770 386.143 749.5 388.643 738 371.643" stroke="#360505" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
+            </>
           )}
         </g>
 
-        {/* Celebrating confetti */}
         {pose === "celebrating" && (
           <g className="mascot-confetti">
-            <circle cx="40" cy="50" r="3" fill="#FFB347" className="confetti-1" />
-            <circle cx="160" cy="40" r="3" fill="#4ECDC4" className="confetti-2" />
-            <rect x="25" y="75" width="6" height="6" rx="1" fill="#45B7D1" className="confetti-3" transform="rotate(30 28 78)" />
-            <rect x="170" y="70" width="6" height="6" rx="1" fill="#FF6B6B" className="confetti-4" transform="rotate(-20 173 73)" />
-            <circle cx="50" cy="35" r="2" fill="#96CEB4" className="confetti-5" />
-            <circle cx="150" cy="55" r="2" fill="#C0392B" className="confetti-6" />
+            <circle cx="95" cy="72" r="12" fill="#FFB347" className="confetti-1" />
+            <circle cx="978" cy="62" r="12" fill="#4ECDC4" className="confetti-2" />
+            <rect x="145" y="108" width="18" height="18" rx="3" fill="#45B7D1" className="confetti-3" transform="rotate(30 154 117)" />
+            <rect x="936" y="102" width="18" height="18" rx="3" fill="#FF6B6B" className="confetti-4" transform="rotate(-20 945 111)" />
+            <circle cx="210" cy="52" r="9" fill="#96CEB4" className="confetti-5" />
+            <circle cx="864" cy="76" r="9" fill="#C0392B" className="confetti-6" />
           </g>
         )}
       </svg>

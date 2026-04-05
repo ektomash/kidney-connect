@@ -20,6 +20,16 @@
   transition: transform 0.3s ease;
 }
 
+.mascot-left-arm,
+.mascot-right-arm,
+.mascot-left-leg,
+.mascot-right-leg,
+.mascot-mouth,
+.mascot-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 /* --- Idle: gentle float + wave --- */
 
 .mascot-idle .mascot-svg {
@@ -27,7 +37,6 @@
 }
 
 .mascot-idle .mascot-right-arm {
-  transform-origin: 145px 120px;
   animation: armWave 1.8s ease-in-out infinite;
 }
 
@@ -53,18 +62,16 @@
 }
 
 .mascot-talking .mascot-left-arm {
-  transform-origin: 55px 120px;
   animation: armGestureLeft 2s ease-in-out infinite;
 }
 
 .mascot-talking .mascot-right-arm {
-  transform-origin: 145px 120px;
   animation: armGestureRight 2s ease-in-out infinite 0.3s;
 }
 
 @keyframes mouthTalk {
-  0%, 100% { transform: scaleY(1); }
-  50% { transform: scaleY(0.6); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
 @keyframes armGestureLeft {
@@ -84,7 +91,6 @@
 }
 
 .mascot-thinking .mascot-left-arm {
-  transform-origin: 55px 120px;
   transform: rotate(25deg) translateY(-10px);
 }
 
@@ -95,12 +101,10 @@
 }
 
 .mascot-celebrating .mascot-left-arm {
-  transform-origin: 55px 120px;
   transform: rotate(-45deg);
 }
 
 .mascot-celebrating .mascot-right-arm {
-  transform-origin: 145px 120px;
   transform: rotate(45deg);
 }
 
@@ -133,6 +137,5 @@
 }
 
 .mascot-encouraging .mascot-left-arm {
-  transform-origin: 55px 120px;
   transform: rotate(-20deg);
 }
