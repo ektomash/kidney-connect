@@ -4,7 +4,6 @@ function LockedLessonCard({ lesson, sectionColor, onClick }) {
   return (
     <button className="locked-card" onClick={onClick}>
       <div className="locked-card-icon-row">
-        <span className="locked-card-emoji">{lesson.icon}</span>
         <span className="locked-card-lock">&#128274;</span>
       </div>
       <div className="locked-card-body">

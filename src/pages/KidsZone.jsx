@@ -97,6 +97,8 @@ function KidsZone() {
         </div>
       </section>
 
+      <SubscribeBanner onSubscribe={() => setShowSubscribe(true)} />
+
       {kidsLockedSections.map((section) => (
         <section key={section.id} className="kz-section kz-section-locked">
           <div className="kz-section-header">
@@ -120,8 +122,6 @@ function KidsZone() {
           </div>
         </section>
       ))}
-
-      <SubscribeBanner onSubscribe={() => setShowSubscribe(true)} />
 
       <div className="kids-zone-back">
         <Link to="/advice" className="kids-zone-back-link">
