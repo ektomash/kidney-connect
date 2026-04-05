@@ -160,7 +160,14 @@ function KidsLessonContent({
                 className={`kids-lesson-image ${imageLoaded ? "loaded" : ""}`}
                 onLoad={() => setImageLoaded(true)}
                 onError={(event) => {
-                  event.currentTarget.src = fallbackImage;
+                  const { currentTarget } = event;
+                  if (currentTarget.dataset.fallbackApplied === "1") {
+                    setImageLoaded(true);
+                    return;
+                  }
+                  currentTarget.dataset.fallbackApplied = "1";
+                  currentTarget.src = fallbackImage;
+                  setImageLoaded(true);
                 }}
               />
               {!imageLoaded && <div className="kids-lesson-image-placeholder" />}
