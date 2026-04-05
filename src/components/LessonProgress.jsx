@@ -46,7 +46,7 @@ function LessonProgress({
           })}
         </div>
 
-        {!isQuizActive && canGoNext && currentStep === totalSteps - 1 && hasQuiz ? (
+        {!isQuizActive && currentStep === totalSteps - 1 && hasQuiz ? (
           <button className="progress-nav-btn quiz-start-btn" onClick={onStartQuiz}>
             Take Quiz &rarr;
           </button>

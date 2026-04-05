@@ -16,7 +16,7 @@ export const kidsLessons = [
             mascotText:
               "Hi there! I'm Rinni, your kidney buddy! Did you know you have two kidneys inside your body? They're shaped like beans \u2014 just like me!",
             image:
-              "https://images.unsplash.com/photo-1530497610245-b1acf43bdd18?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop",
             imageAlt: "Child pointing at their back where kidneys are located",
           },
           {
