@@ -52,7 +52,7 @@ function KidsZone() {
           return (
             <Link
               key={lesson.id}
-              to={`/advice/kids/${lesson.slug || lesson.id}?age=${ageGroup}`}
+              to={`/advice/kids/${lesson.slug || lesson.id}?age=${ageGroup}&page=1&view=lesson`}
               className="lesson-card"
               style={{ "--lesson-color": lesson.color }}
             >
