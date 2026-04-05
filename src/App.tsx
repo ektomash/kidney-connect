@@ -8,13 +8,12 @@ import Advice from "./pages/Advice";
 import KidsZone from "./pages/KidsZone";
 import KidsLesson from "./pages/KidsLesson";
 import Profile from "./pages/Profile";
-import "./App.css";
 
 function App() {
   return (
-    <div className="app">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="main-content">
+      <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
