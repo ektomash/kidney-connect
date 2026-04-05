@@ -99,40 +99,42 @@ function KidsLessonContent({ lessonKey, ageGroup }) {
         <p className="kids-lesson-subtitle">{lesson.subtitle}</p>
       </div>
 
-      {!isQuizActive && step && (
-        <div className="kids-lesson-content" key={currentStep}>
-          <div className="kids-lesson-image-wrapper">
-            <img
-              src={step.image}
-              alt={step.imageAlt}
-              className={`kids-lesson-image ${imageLoaded ? "loaded" : ""}`}
-              onLoad={() => setImageLoaded(true)}
-            />
-            {!imageLoaded && <div className="kids-lesson-image-placeholder" />}
-          </div>
+      <div className="kids-lesson-stage">
+        {!isQuizActive && step && (
+          <div className="kids-lesson-content" key={currentStep}>
+            <div className="kids-lesson-image-wrapper">
+              <img
+                src={step.image}
+                alt={step.imageAlt}
+                className={`kids-lesson-image ${imageLoaded ? "loaded" : ""}`}
+                onLoad={() => setImageLoaded(true)}
+              />
+              {!imageLoaded && <div className="kids-lesson-image-placeholder" />}
+            </div>
 
-          <div className="kids-lesson-mascot-row">
-            <Mascot pose={mascotPose} size={100} />
-            <SpeechBubble
-              text={step.mascotText}
-              onAudioStart={handleAudioStart}
-              onAudioEnd={handleAudioEnd}
+            <div className="kids-lesson-mascot-row">
+              <Mascot pose={mascotPose} size={100} />
+              <SpeechBubble
+                text={step.mascotText}
+                onAudioStart={handleAudioStart}
+                onAudioEnd={handleAudioEnd}
+              />
+            </div>
+          </div>
+        )}
+
+        {isQuizActive && (
+          <div className="kids-lesson-quiz">
+            <h2 className="kids-lesson-quiz-title">
+              Test Your Knowledge! &#9989;
+            </h2>
+            <Quiz
+              questions={quiz}
+              onComplete={() => {}}
             />
           </div>
-        </div>
-      )}
-
-      {isQuizActive && (
-        <div className="kids-lesson-quiz">
-          <h2 className="kids-lesson-quiz-title">
-            Test Your Knowledge! &#9989;
-          </h2>
-          <Quiz
-            questions={quiz}
-            onComplete={() => {}}
-          />
-        </div>
-      )}
+        )}
+      </div>
 
       <LessonProgress
         currentStep={currentStep}
