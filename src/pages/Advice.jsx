@@ -31,7 +31,7 @@ function Advice() {
             <span className="kids-zone-banner-badge">NEW</span>
             <h2>Kids Zone &#10024;</h2>
             <p>
-              48 interactive lessons about kidney health for ages 7-16!
+              48 interactive lessons about kidney health for ages 7-18!
               6 free lessons to explore + premium content for schools.
             </p>
             <span className="kids-zone-banner-cta">

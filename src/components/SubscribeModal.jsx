@@ -47,7 +47,7 @@ function SubscribeModal({ open, onClose }) {
               <h2>Unlock the Full Kids Zone</h2>
               <p>
                 Get access to 48 interactive lessons, quizzes, and labs for your
-                students. Designed for ages 7-16.
+                students. Designed for ages 7-18.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ function SubscribeBanner({ onSubscribe }) {
         <p>
           Give your students access to 48 interactive lessons, quizzes, and
           hands-on labs about kidney health, the human body, nutrition, and
-          more. Built for classrooms ages 7-16.
+          more. Built for classrooms ages 7-18.
         </p>
         <div className="subscribe-banner-stats">
           <div className="subscribe-stat">

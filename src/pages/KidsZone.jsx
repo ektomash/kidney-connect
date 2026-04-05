@@ -11,7 +11,7 @@ import "./KidsZone.css";
 
 const AGE_GROUPS = [
   { key: "younger", label: "Ages 7-10", emoji: "\uD83C\uDF1F" },
-  { key: "older", label: "Ages 11-16", emoji: "\uD83D\uDE80" },
+  { key: "older", label: "Ages 11-18", emoji: "\uD83D\uDE80" },
 ];
 
 function KidsZone() {
