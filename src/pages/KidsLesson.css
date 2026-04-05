@@ -1,0 +1,194 @@
+.kids-lesson {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.kids-lesson-header {
+  margin-bottom: 2rem;
+}
+
+.kids-lesson-back {
+  display: inline-block;
+  color: #c0392b;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.kids-lesson-back:hover {
+  text-decoration: underline;
+}
+
+.kids-lesson-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.kids-lesson-icon {
+  font-size: 2rem;
+}
+
+.kids-lesson-title-row h1 {
+  font-size: 1.8rem;
+  color: #2c1a1a;
+  margin: 0;
+}
+
+.kids-lesson-subtitle {
+  color: #6b4c4c;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.kids-lesson-content {
+  display: flex;
+  flex-direction: column;
+  animation: lessonFadeIn 0.4s ease-out;
+}
+
+.kids-lesson-stage {
+  min-height: 620px;
+}
+
+@keyframes lessonFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.kids-lesson-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: #f8f0f0;
+}
+
+.kids-lesson-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.kids-lesson-image.loaded {
+  opacity: 1;
+}
+
+.kids-lesson-image-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fef5f5, #fce4e4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kids-lesson-image-placeholder::after {
+  content: "\1F3A8";
+  font-size: 3rem;
+  opacity: 0.3;
+}
+
+.kids-lesson-mascot-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kids-lesson-quiz {
+  display: flex;
+  flex-direction: column;
+  animation: lessonFadeIn 0.4s ease-out;
+}
+
+.kids-lesson-quiz-title {
+  font-size: 1.3rem;
+  color: #2c1a1a;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.kids-lesson-not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.kids-lesson-not-found h2 {
+  color: #2c1a1a;
+  margin: 1rem 0 0.5rem;
+}
+
+.kids-lesson-not-found a {
+  color: #c0392b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kids-lesson-nav-lessons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0e0e0;
+}
+
+.nav-lesson-link {
+  color: #c0392b;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: #fef5f5;
+  transition: all 0.2s;
+}
+
+.nav-lesson-link:hover {
+  background: #fce4e4;
+}
+
+.nav-lesson-link.prev {
+  margin-right: auto;
+}
+
+.nav-lesson-link.next {
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .kids-lesson {
+    padding: 1.25rem;
+  }
+
+  .kids-lesson-image-wrapper {
+    height: 220px;
+  }
+
+  .kids-lesson-title-row h1 {
+    font-size: 1.4rem;
+  }
+
+  .kids-lesson-stage {
+    min-height: auto;
+  }
+
+  .kids-lesson-mascot-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kids-lesson-nav-lessons {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+    text-align: center;
+  }
+}

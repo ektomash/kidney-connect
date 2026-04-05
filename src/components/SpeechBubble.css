@@ -1,0 +1,85 @@
+.speech-bubble {
+  position: relative;
+  max-width: 480px;
+  flex: 1;
+}
+
+.speech-bubble-content {
+  background: #fff;
+  border: 2px solid #fce4e4;
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.speech-bubble-tail {
+  position: absolute;
+  left: -12px;
+  top: 24px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 14px solid #fce4e4;
+}
+
+.speech-bubble-tail::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid #fff;
+}
+
+.speech-bubble-text {
+  color: #2c1a1a;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 0.75rem 0;
+}
+
+.speech-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 2px solid #fce4e4;
+  background: #fef5f5;
+  color: #c0392b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.speech-audio-btn:hover {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+}
+
+.speech-audio-btn.playing {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+  animation: audioPulse 1.2s ease-in-out infinite;
+}
+
+.audio-icon {
+  font-size: 0.75rem;
+}
+
+@keyframes audioPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(192, 57, 43, 0); }
+}

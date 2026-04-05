@@ -1,77 +1,22 @@
-@import "tailwindcss";
-
-@custom-variant dark (&:is(.dark *));
-
-@theme {
-  --color-background: #fdfafa;
-  --color-foreground: #2c1a1a;
-
-  --color-card: #ffffff;
-  --color-card-foreground: #2c1a1a;
-
-  --color-popover: #ffffff;
-  --color-popover-foreground: #2c1a1a;
-
-  --color-primary: #c0392b;
-  --color-primary-foreground: #ffffff;
-
-  --color-secondary: #fef5f5;
-  --color-secondary-foreground: #2c1a1a;
-
-  --color-muted: #fce4e4;
-  --color-muted-foreground: #8b5e5e;
-
-  --color-accent: #fce4e4;
-  --color-accent-foreground: #2c1a1a;
-
-  --color-destructive: #e74c3c;
-  --color-destructive-foreground: #ffffff;
-
-  --color-border: #f0e0e0;
-  --color-input: #e0d0d0;
-  --color-ring: #c0392b;
-
-  --color-kidney-50: #fef5f5;
-  --color-kidney-100: #fce4e4;
-  --color-kidney-200: #f5a5a5;
-  --color-kidney-300: #f8d7d7;
-  --color-kidney-400: #e74c3c;
-  --color-kidney-500: #c0392b;
-  --color-kidney-600: #a93226;
-  --color-kidney-700: #8b2525;
-  --color-kidney-800: #4a2020;
-  --color-kidney-900: #2c1a1a;
-
-  --color-warm-text: #4a3535;
-  --color-warm-muted: #6b4c4c;
-  --color-warm-subtle: #8b5e5e;
-
-  --color-success: #27ae60;
-  --color-success-foreground: #ffffff;
-  --color-success-muted: #d4edda;
-
-  --radius-lg: 16px;
-  --radius-md: 12px;
-  --radius-sm: 8px;
-  --radius-full: 9999px;
-
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-sans);
+:root {
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-foreground);
-  background: var(--color-background);
+  color: #2c1a1a;
+  background: #fdfafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
 }
 
 #root {
@@ -105,126 +50,4 @@ button {
 
 input, textarea, select {
   font-family: inherit;
-}
-
-/* ===== Mascot Animations (must stay global — SVG class-based) ===== */
-
-.mascot-wrapper {
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.mascot-svg {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.mascot-body,
-.mascot-left-arm,
-.mascot-right-arm,
-.mascot-left-leg,
-.mascot-right-leg,
-.mascot-eyes,
-.mascot-eyebrows,
-.mascot-mouth {
-  transition: transform 0.3s ease;
-}
-
-.mascot-left-arm,
-.mascot-right-arm,
-.mascot-left-leg,
-.mascot-right-leg,
-.mascot-mouth,
-.mascot-eyes {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-/* Idle */
-.mascot-idle .mascot-svg { animation: mascotFloat 3s ease-in-out infinite; }
-.mascot-idle .mascot-right-arm { animation: armWave 1.8s ease-in-out infinite; }
-
-@keyframes mascotFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-@keyframes armWave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-15deg); }
-  75% { transform: rotate(10deg); }
-}
-
-/* Talking */
-.mascot-talking .mascot-svg { animation: mascotFloat 3s ease-in-out infinite; }
-.mascot-talking .mascot-mouth-talking { animation: mouthTalk 0.4s ease-in-out infinite; }
-.mascot-talking .mascot-left-arm { animation: armGestureLeft 2s ease-in-out infinite; }
-.mascot-talking .mascot-right-arm { animation: armGestureRight 2s ease-in-out infinite 0.3s; }
-
-@keyframes mouthTalk {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
-}
-@keyframes armGestureLeft {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(8deg); }
-}
-@keyframes armGestureRight {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-8deg); }
-}
-
-/* Thinking */
-.mascot-thinking .mascot-svg { transform: rotate(-3deg); }
-.mascot-thinking .mascot-left-arm { transform: rotate(25deg) translateY(-10px); }
-
-/* Celebrating */
-.mascot-celebrating .mascot-svg { animation: celebrateBounce 0.6s ease-in-out infinite; }
-.mascot-celebrating .mascot-left-arm { transform: rotate(-45deg); }
-.mascot-celebrating .mascot-right-arm { transform: rotate(45deg); }
-
-@keyframes celebrateBounce {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.03); }
-}
-
-.confetti-1 { animation: confettiFall1 1.5s ease-in-out infinite; }
-.confetti-2 { animation: confettiFall2 1.8s ease-in-out infinite 0.2s; }
-.confetti-3 { animation: confettiFall1 1.4s ease-in-out infinite 0.4s; }
-.confetti-4 { animation: confettiFall2 1.6s ease-in-out infinite 0.1s; }
-.confetti-5 { animation: confettiFall1 1.7s ease-in-out infinite 0.3s; }
-.confetti-6 { animation: confettiFall2 1.3s ease-in-out infinite 0.5s; }
-
-@keyframes confettiFall1 {
-  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(40px) rotate(180deg); opacity: 0; }
-}
-@keyframes confettiFall2 {
-  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(35px) rotate(-180deg); opacity: 0; }
-}
-
-/* Encouraging */
-.mascot-encouraging .mascot-svg { transform: rotate(3deg); }
-.mascot-encouraging .mascot-left-arm { transform: rotate(-20deg); }
-
-/* ===== Lesson fade-in animation ===== */
-@keyframes lessonFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes feedbackSlide {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes audioPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.3); }
-  50% { box-shadow: 0 0 0 6px rgba(192, 57, 43, 0); }
-}
-
-@keyframes quizPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.3); }
-  50% { box-shadow: 0 0 0 8px rgba(192, 57, 43, 0); }
 }

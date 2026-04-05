@@ -202,7 +202,7 @@ export const kidsLessons = [
             mascotText:
               "The clean blood goes back to your heart, and the pee travels down to your bladder. When your bladder is full, you feel like you need to go to the bathroom. And the cycle starts all over again!",
             image:
-              "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?w=600&h=400&fit=crop",
             imageAlt: "Simple diagram of the urinary system cycle",
           },
         ],
@@ -276,7 +276,7 @@ export const kidsLessons = [
             mascotText:
               "The final product \u2014 urine \u2014 flows from the collecting ducts to the renal pelvis, down the ureters, and into the bladder. The whole process is regulated by hormones like ADH (antidiuretic hormone) and aldosterone, which control how much water is reabsorbed.",
             image:
-              "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?w=600&h=400&fit=crop",
             imageAlt: "Complete urinary system diagram",
           },
         ],
