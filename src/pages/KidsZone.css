@@ -186,6 +186,60 @@
   text-decoration: underline;
 }
 
+.kz-section {
+  margin-bottom: 2.5rem;
+}
+
+.kz-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.kz-section-header h2 {
+  font-size: 1.35rem;
+  color: #2c1a1a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kz-section-icon {
+  font-size: 1.5rem;
+}
+
+.kz-section-count {
+  font-size: 0.85rem;
+  color: #27ae60;
+  font-weight: 600;
+  background: #eafaf1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+}
+
+.kz-section-badge {
+  font-size: 0.8rem;
+  color: #c0392b;
+  font-weight: 600;
+  background: #fef5f5;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+}
+
+.kz-section-locked {
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0e0e0;
+}
+
+.locked-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
 @media (max-width: 768px) {
   .kids-zone-hero {
     flex-direction: column;

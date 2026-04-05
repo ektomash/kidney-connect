@@ -31,11 +31,11 @@ function Advice() {
             <span className="kids-zone-banner-badge">NEW</span>
             <h2>Kids Zone &#10024;</h2>
             <p>
-              Fun interactive lessons about kidney health for ages 7-16!
-              Learn with Rinni, your kidney buddy.
+              48 interactive lessons about kidney health for ages 7-16!
+              6 free lessons to explore + premium content for schools.
             </p>
             <span className="kids-zone-banner-cta">
-              Start Learning &rarr;
+              Explore Free Lessons &rarr;
             </span>
           </div>
           <div className="kids-zone-banner-mascot">

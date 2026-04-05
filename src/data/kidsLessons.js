@@ -2,6 +2,7 @@ export const kidsLessons = [
   {
     id: 1,
     slug: "what-are-kidneys",
+    free: true,
     title: "What Are Kidneys?",
     subtitle: "Meet your body's amazing filters!",
     coverImage:
@@ -164,6 +165,7 @@ export const kidsLessons = [
   {
     id: 2,
     slug: "how-kidneys-work",
+    free: true,
     title: "How Do Kidneys Work?",
     subtitle: "The incredible journey of blood through your kidneys",
     coverImage:
@@ -321,6 +323,7 @@ export const kidsLessons = [
   {
     id: 3,
     slug: "why-kidneys-get-sick",
+    free: true,
     title: "Why Do Kidneys Get Sick?",
     subtitle: "Understanding kidney disease and warning signs",
     coverImage:
@@ -477,6 +480,7 @@ export const kidsLessons = [
   {
     id: 4,
     slug: "keeping-kidneys-healthy",
+    free: true,
     title: "How to Keep Kidneys Healthy",
     subtitle: "Simple habits for a lifetime of kidney health",
     coverImage:
@@ -655,6 +659,7 @@ export const kidsLessons = [
   {
     id: 5,
     slug: "what-is-dialysis",
+    free: true,
     title: "What Is Dialysis?",
     subtitle: "When kidneys need a helping hand",
     coverImage:
@@ -818,6 +823,7 @@ export const kidsLessons = [
   {
     id: 6,
     slug: "heroes-organ-donors",
+    free: true,
     title: "Heroes: Organ Donors",
     subtitle: "How organ donation saves lives",
     coverImage:
