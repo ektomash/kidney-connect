@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Funds from "./pages/Funds";
 import Advice from "./pages/Advice";
+import KidsZone from "./pages/KidsZone";
+import KidsLesson from "./pages/KidsLesson";
 import Profile from "./pages/Profile";
 import "./App.css";
 
@@ -18,6 +20,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/funds" element={<Funds />} />
           <Route path="/advice" element={<Advice />} />
+          <Route path="/advice/kids" element={<KidsZone />} />
+          <Route path="/advice/kids/:id" element={<KidsLesson />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>

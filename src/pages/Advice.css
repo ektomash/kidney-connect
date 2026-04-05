@@ -22,7 +22,76 @@
   margin: 0 auto;
 }
 
-/* Category filter */
+.kids-zone-banner {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #fef5f5, #ffe8e0, #fff5e6);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid #fce4e4;
+  transition: all 0.25s;
+}
+
+.kids-zone-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.12);
+  border-color: #f5a5a5;
+}
+
+.kids-zone-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.kids-zone-banner-text {
+  flex: 1;
+}
+
+.kids-zone-banner-badge {
+  display: inline-block;
+  background: #c0392b;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.kids-zone-banner-text h2 {
+  font-size: 1.4rem;
+  color: #2c1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.kids-zone-banner-text p {
+  color: #6b4c4c;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.kids-zone-banner-cta {
+  color: #c0392b;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.kids-zone-banner-mascot {
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .kids-zone-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .category-filter {
   display: flex;
   justify-content: center;

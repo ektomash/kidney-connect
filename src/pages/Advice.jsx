@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { articles } from "../data/mockData";
+import Mascot from "../components/Mascot";
 import "./Advice.css";
 
 function Advice() {
@@ -22,6 +24,26 @@ function Advice() {
           difference. Knowledge is the first step toward change.
         </p>
       </div>
+
+      <Link to="/advice/kids" className="kids-zone-banner">
+        <div className="kids-zone-banner-content">
+          <div className="kids-zone-banner-text">
+            <span className="kids-zone-banner-badge">NEW</span>
+            <h2>Kids Zone &#10024;</h2>
+            <p>
+              Fun interactive lessons about kidney health for ages 7-16!
+              Learn with Rinni, your kidney buddy.
+            </p>
+            <span className="kids-zone-banner-cta">
+              Start Learning &rarr;
+            </span>
+          </div>
+          <div className="kids-zone-banner-mascot">
+            <Mascot pose="idle" size={100} />
+          </div>
+        </div>
+      </Link>
+
 
       <div className="category-filter">
         {categories.map((cat) => (
