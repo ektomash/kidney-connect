@@ -17,6 +17,9 @@ function Home() {
             raise awareness about kidney disease and encourage organ donation.
           </p>
           <div className="hero-actions">
+            <Link to="/profile" className="btn btn-join-hero">
+              Join Kidney Connect
+            </Link>
             <Link to="/blog" className="btn btn-primary">
               Read Patient Stories
             </Link>
