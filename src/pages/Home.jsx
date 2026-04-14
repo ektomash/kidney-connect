@@ -20,12 +20,14 @@ function Home() {
             <Link to="/profile" className="btn btn-join-hero">
               Join Kidney Connect
             </Link>
-            <Link to="/blog" className="btn btn-primary">
-              Read Patient Stories
-            </Link>
-            <Link to="/funds" className="btn btn-secondary">
-              Support a Cause
-            </Link>
+            <div className="hero-actions-secondary">
+              <Link to="/blog" className="btn btn-primary btn-read-stories">
+                Read Patient Stories
+              </Link>
+              <Link to="/funds" className="btn btn-secondary">
+                Support a Cause
+              </Link>
+            </div>
           </div>
         </div>
       </section>
